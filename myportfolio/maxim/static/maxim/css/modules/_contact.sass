@@ -1,0 +1,94 @@
+// position fixed in order to escape the 1440px wrapper
+@use "../base/vars" as *;
+.contact
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background:
+    image: url("../image/contact-fjord.jpg")
+    position: center
+    size: cover
+    repeat: no-repeat
+
+  display: flex
+  align-items: center
+  justify-content: center  // Ensures content is centered in the section
+
+  &--lockup
+    display: flex
+    flex-direction: row  // Ensures image is on the left, text on the right
+    align-items: center
+    width: 900px
+    max-width: 75%
+    height: 100%
+    justify-content: space-between  // Separates image & text
+
+    @media (max-width: 1180px)
+      max-width: 90%
+
+    @media (max-width: 767px)
+      flex-direction: column  // Stack items on small screens
+      justify-content: center
+
+  &--image-container
+    flex: 1  // Takes up space on the left
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 20px
+    max-width: 60%  // Prevents the image from taking too much space
+
+  &--image
+    width: 500px  // Adjust image size
+    height: 500px
+    border-radius: 5%  // Makes it circular
+    object-fit: cover  // Ensures it looks good inside the circle
+
+  .modal
+    flex: 1  // Takes up space on the right
+    padding: 45px
+    text-align: center
+    background-color: $black
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.75)
+
+    &--information
+      p,
+      a
+        display: block
+        margin: 14px 0
+        text-decoration: none
+        color: $white
+        font-weight: 700
+
+      p
+        margin-top: 0
+
+    &--options
+      margin: 0
+      padding: 0
+      list-style: none
+
+      & > li
+        width: 130px
+        margin: 0 auto 25px auto
+
+      li:nth-child(1)
+        background-color: #1769ff
+
+      li:nth-child(2)
+        background-color: #ea4c89
+
+      li:nth-child(3)
+        margin-bottom: 0
+        background-color: $highlight
+        text-transform: uppercase
+
+      a
+        display: block
+        width: 100%
+        padding: 8px 0
+        text-decoration: none
+        color: $white
+        font-weight: 700

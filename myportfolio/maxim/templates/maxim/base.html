@@ -1,0 +1,49 @@
+<!-- base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Maxim</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <!-- Main compiled CSS -->
+  <link rel="stylesheet" href="{% static 'maxim/css/main.css' %}">
+  <script src="{% static 'js/functions.js' %}"></script>
+
+</head>
+<body>
+  <!-- notification for small viewports and landscape oriented smartphones -->
+  <div class="device-notification">
+    <a class="device-notification--logo" href="#0">
+      <!-- Change logo.png to match your file location -->
+      <img src="{% static 'maxim/images/logo.png' %}" alt="Global">
+      <p>Maxim Portfolio</p>
+    </a>
+    <p class="device-notification--message">
+      Maxim has so much to offer that I must request you orient your device to portrait
+      or find a larger screen. You won't be disappointed.
+    </p>
+  </div>
+
+  <!-- The main perspective container from index.html -->
+  <div class="perspective effect-rotate-left">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <!-- Scripts -->
+  <!-- jQuery CDN or fallback to local copy -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="{% static "maxim/js/vendor/jquery-2.2.4.min.js" %}"><\/script>')
+  </script>
+
+  <!-- Your main JS (previously functions-min.js, etc.) -->
+  <script src="{% static 'maxim/js/functions-min.js' %}"></script>
+
+</body>
+</html>

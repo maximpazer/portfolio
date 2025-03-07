@@ -1,0 +1,298 @@
+<!-- home.html -->
+{% extends "maxim/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- This container structure matches the original <body> from index.html -->
+<div class="container">
+  <div class="outer-nav--return"></div>
+
+  <div id="viewport" class="l-viewport">
+    <div class="l-wrapper">
+
+      <!-- HEADER -->
+      <header class="header">
+        <a class="header--logo" href="#0">
+          <img src="{% static 'maxim/images/logo.png' %}" alt="Global">
+          <p>Maxim Portfolio</p>
+        </a>
+        <button class="header--cta cta">Contact me</button>
+        <div class="header--nav-toggle">
+          <span></span>
+        </div>
+      </header>
+
+      <!-- SIDE NAV -->
+      <nav class="l-side-nav">
+        <ul class="side-nav">
+          <li class="is-active"><span>Home</span></li>
+          <li><span>Projects</span></li>
+          <li><span>My way</span></li>
+          <li><span>Current path</span></li>
+          <li><span>Contact</span></li>
+        </ul>
+      </nav>
+
+      <!-- MAIN CONTENT -->
+      <ul class="l-main-content main-content">
+        
+        <!-- =========================
+             HOME / INTRO SECTION
+        ========================== -->
+        <li class="l-section section section--is-active">
+          <div class="intro">
+            <div class="intro--banner">
+                <h1>
+                    Data<br>
+                    AI<br>
+                    Innovation 
+                  </h1>
+                  
+                                <button class="cta">
+                Contact me
+                <!-- SVG ARROW -->
+                <svg version="1.1" id="Layer_1" 
+                     xmlns="http://www.w3.org/2000/svg" 
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" viewBox="0 0 150 118"
+                     style="enable-background:new 0 0 150 118;" 
+                     xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1
+                      c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193
+                      C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262
+                      c147,144,272,271,279,282c30,51,23,60-219,304
+                      C947,1180,926,1196,870,1167z"/>
+                  </g>
+                </svg>
+                <span class="btn-background"></span>
+              </button>
+              <img src="{% static 'maxim/images/Maximilian_Pazer_2025.png' %}" alt="Welcome" >
+            </div>
+            <div class="intro--options">
+              <a href="#0">
+              <h3>Data Science</h3>
+              <p>Currently pursuing a Data Science degree in Stuttgart, in collaboration with HPE.</p>
+              </a>
+              <a href="#0">
+              <h3>Artificial Intelligence</h3>
+              <p>Engaged in numerous AI projects, encompassing both theoretical and practical applications.</p>
+              </a>
+              <a href="#0">
+              <h3>Innovation</h3>
+              <p>Embracing unique paths and innovative solutions.</p>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <!-- =========================
+             WORKS SECTION
+        ========================== -->
+        <li class="l-section section">
+          <div class="work">
+            <h2>Some projects</h2>
+            <div class="work--lockup">
+              <ul class="slider">
+                <li class="slider--item slider--item-left">
+                  <a href="#0">
+                    <div class="slider--item-image">
+                      <img src="{% static 'maxim/images/work-binary.jpg' %}" alt="Victory">
+                    </div>
+                    <p class="slider--item-title">Data Analysis & Visualisation</p>
+                    <p class="slider--item-description">
+                      I analyzed Alaskan salmon data and visualized the results using Python and Streamlit in a project.
+                    </p>
+                  </a>
+                </li>
+                <li class="slider--item slider--item-center">
+                  <a href="#0">
+                    <div class="slider--item-image">
+                      <img src="{% static 'maxim/images/work-data.jpg' %}" alt="Metiew and Smith">
+                    </div>
+                    <p class="slider--item-title">Social Network Analysis</p>
+                    <p class="slider--item-description">
+                      The system of renewable energy in Germany is complex. I visualized it using network analysis and R.
+                    </p>
+                  </a>
+                </li>
+                <li class="slider--item slider--item-right">
+                  <a href="#0">
+                    <div class="slider--item-image">
+                      <img src="{% static 'maxim/images/mario_party.png' %}" alt="Alex Nowak">
+                    </div>
+                    <p class="slider--item-title">Mario Party</p>
+                    <p class="slider--item-description">
+                      Using Java FX, I created a game that is similar to Mario Party. It was a lot of fun to develop.
+                    </p>
+                  </a>
+                </li>
+              </ul>
+              <div class="slider--prev">
+                <svg version="1.1" id="Layer_1" 
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" viewBox="0 0 150 118"
+                     style="enable-background:new 0 0 150 118;" 
+                     xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52
+                      c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                      c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20
+                      c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                      c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="slider--next">
+                <svg version="1.1" id="Layer_1" 
+                     xmlns="http://www.w3.org/2000/svg" 
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px" y="0px" viewBox="0 0 150 118"
+                     style="enable-background:new 0 0 150 118;" 
+                     xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185
+                      l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575
+                      l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262
+                      c147,144,272,271,279,282c30,51,23,60-219,304
+                      C947,1180,926,1196,870,1167z"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+        <li class="l-section section">
+          <div class="about">
+      
+
+            <!-- Zweispaltiges Layout -->
+            <div class="about--content">
+
+              <!-- Karriereweg -->
+               
+              <div class="about--timeline">
+  
+                <div class="timeline-item">
+                  <span class="year">2015-2022</span>
+                  <h3>Robert-Koch High School</h3>
+                  <p>General university entrance qualification with a focus on natural sciences.</p>
+                </div>
+              
+                <div class="timeline-item">
+                  <span class="year">2023-2026</span>
+                  <h3>DHBW Stuttgart</h3>
+                  <p>Dual study program in Data Science with a focus on Machine Learning & Big Data.</p>
+                </div>
+              
+                <div class="timeline-item">
+                  <span class="year">2023-today</span>
+                  <h3>Hewlett Packard Enterprise</h3>
+                  <p>Industry partner, projects in Cloud Computing, AI & Data Engineering.</p>
+                </div>
+              
+                <div class="timeline-item">
+                  <span class="year">2024-today</span>
+                  <h3>DHBW Engineering</h3>
+                  <p>Involvement in DHBW Engineering for Formula Student & Data Science.</p>
+                </div>
+              
+              </div>
+              
+              <!-- Bild auf der rechten Seite -->
+              <div class="about--image">
+                <img src="{% static 'maxim/images/about-tree.png' %}" alt="About Us">
+              </div>
+            </div>
+          </div>
+        </li>
+        
+
+        <!-- =========================
+             NOW SECTION
+        ========================== -->
+
+        <li class="l-section section">
+          <div class="now">
+            <h2>What I’m Doing Now</h2>
+            <div class="now-container">
+              <!-- Left Side: Text Content -->
+              <div class="now-text">
+        
+                <h3>🌍 Studying Abroad in Sweden</h3>
+                <p><strong>Karlstad University – Research & Development</strong></p>
+                <p>🔎 Focus: Usability Testing & Data Science</p>
+        
+                <h3>🏎️ Formula Student – Big Data Roadmap</h3>
+                <p>🔧 Tech Stack: Python, Apache Hudi, PySpark</p>
+                <p>🎯 Goal: Optimizing AI-driven data analysis for race cars</p>
+        
+                <h3>💡 Personal Learning</h3>
+                <p><strong>Deep Dive into AI and Data Science</strong></p>
+                <p>🛠 Participating in courses with focus on Machine Learning, AI, and Data Science</p>
+              </div>
+        
+              <!-- Right Side: Images -->
+              <div class="now-images">
+                <img src="{% static 'maxim/images/maxim-kau.jpeg' %}" alt="Karlstad University in Sweden">
+                <img src="{% static 'maxim/images/northern-lights.jpeg' %}" alt="Northern Lights">
+              </div>
+            </div>
+          </div>
+        </li>
+       
+                <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+        <li class="l-section section">
+            <div class="contact">
+              <div class="contact--lockup">
+                
+                <!-- Profile Image on the Left -->
+                <div class="contact--image-container">
+                  <img src="{% static 'maxim/images/contact-portrait.jpeg' %}" alt="Your Photo" class="contact--image">
+                </div>
+            
+                <!-- Contact Info on the Right -->
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Stuttgart, Germany</p>
+                    <p>Karlstad, Sweden</p>
+                    <a href="mailto:pazerm@outlook.de">pazerm@outlook.de</a>
+                  </div>
+                  <ul class="modal--options">
+                    <li><a href="https://www.linkedin.com/in/maximilian-pazer-53291a236">LinkedIn</a></li>
+                    <li><a href="https://github.com/maximpazer">Github</a></li>
+                    <li><a href="mailto:pazerm@outlook.de">Contact Me</a></li>
+                    <li><a href="/datenschutz">DSGVO</a></li>
+                  </ul>
+                </div>
+            
+              </div>
+            </div>            
+          </li>
+      </ul>
+      <!-- end .l-main-content -->
+
+    </div>
+    <!-- end .l-wrapper -->
+  </div>
+  <!-- end #viewport -->
+</div>
+<!-- end .container -->
+
+<!-- The outer-nav after the container -->
+<ul class="outer-nav">
+  <li class="is-active">Home</li>
+  <li>Projects</li>
+  <li>About</li>
+  <li>Current path</li>
+  <li>Contact</li>
+
+</ul>
+{% endblock %}

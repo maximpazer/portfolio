@@ -1,0 +1,131 @@
+@use "sass:color";
+@use "../base/vars" as *;
+
+.about
+  position: relative
+  width: 100%
+  max-width: 1000px
+  margin: 0 auto
+  padding: 40px 20px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-top: 100px
+
+  h3
+    font-size: 1.5rem
+    color: $white
+    text-align: left
+  
+
+  @media (max-width: 1180px)
+    padding: 30px 15px
+
+  &--content
+    display: grid
+    grid-template-columns: 1fr 300px
+    gap: 0px
+    align-items: start
+
+
+
+    @media (max-width: 900px)
+      grid-template-columns: 1fr
+      gap: 20px
+      max-height: none
+
+  &--timeline
+    position: relative
+    padding-left: 40px
+    margin-top: 0
+    transform: translateY(-5%)
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 10px
+      bottom: 10px
+      width: 2px
+      background: $highlight
+      border-radius: 2px
+
+    .timeline-item
+      position: relative
+      padding: 5px
+      background: rgba($white, 0.03)
+      border-radius: 6px
+      transform: scale(0.95)
+      transition: transform 0.2s ease
+
+      &:hover
+        transform: scale(0.97)
+
+      &::before
+        content: ''
+        position: absolute
+        left: -18px
+        top: 22px
+        width: 10px
+        height: 10px
+        background: $highlight
+        border-radius: 50%
+        box-shadow: 0 0 8px rgba($highlight, 0.3)
+
+      .year
+        font-size: 0.8rem
+      p
+        font-size: 0.85rem
+        line-height: 1.4
+        color: rgba($white, 0.8)
+        position: relative
+
+  &--image
+    position: sticky
+    top: 50%
+    transform: translateY(-50%)
+    height: -50%
+    padding-top: 60%
+
+    img
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+
+  &--banner
+    h2
+      font-size: 2rem
+      margin-bottom: 1.5rem
+
+@media (max-width: 768px)
+  .about
+    padding: 30px 10px
+    min-height: auto
+
+    &--content
+      grid-template-columns: 1fr
+      max-height: none
+
+    &--timeline
+      padding-left: 30px
+      transform: none
+
+      .timeline-item
+        padding: 12px
+        margin-bottom: 20px
+
+        &::before
+          left: -15px
+          top: 18px
+
+    &--image
+      position: relative
+      height: auto
+      padding-top: 0
+      margin-top: 30px
+
+      img
+        position: static
+        transform: none
+        max-height: 50vh
